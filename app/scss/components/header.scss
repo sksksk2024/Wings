@@ -1,0 +1,40 @@
+@use '../util' as *;
+
+  .header {
+    display: flex;
+    justify-content: center;
+    margin-top: rem(15);
+    
+    &__button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 210px;
+      padding: rem(6);
+      border: 0 solid;
+      background-color: var(--gray);
+      border-radius: rem(24);
+      opacity: 0.85;
+      
+      a {
+        background-color: var(--black);
+        color: var(--white);
+        padding: 6px 26px;
+        margin: rem(1) rem(1.1);
+        cursor: pointer;
+        border-radius: rem(16);
+        width: rem(100);
+        height: rem(35);
+        box-shadow: 0 rem(10) rem(25) rgba(0, 0, 0, .5);
+        transition: opacity 200ms ease-in-out;
+      } 
+
+      a:hover {
+        background-color: var(--ltblack);
+      }
+
+      &:hover {
+        opacity: 0.82;
+      }
+    }
+  }
