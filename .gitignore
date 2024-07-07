@@ -1,6 +1,6 @@
 # Node.js
 node_modules/
-dist/
+# dist/
 
 # Logs
 logs/
@@ -21,4 +21,4 @@ npm-debug.log*
 .env
 
 # Gulp
-gulpfile.js
+# gulpfile.js
