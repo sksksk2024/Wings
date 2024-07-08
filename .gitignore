@@ -1,6 +1,5 @@
 # Node.js
 node_modules/
-# dist/
 
 # Logs
 logs/
@@ -19,6 +18,3 @@ npm-debug.log*
 # Miscellaneous
 .DS_Store
 .env
-
-# Gulp
-# gulpfile.js
