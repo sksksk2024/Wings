@@ -8,15 +8,13 @@ const babel = require('gulp-babel');
 const terser = require('gulp-terser');
 const browsersync = require('browser-sync').create();
 
-// Use dart-sass for @use
-//sass.compiler = require('dart-sass');
-
 // Sass Task
 function scssTask() {
   return src('app/scss/style.scss', { sourcemaps: true })
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(dest('dist', { sourcemaps: '.' }));
+    .pipe(dest('dist', { sourcemaps: '.' }))
+    .pipe(browsersync.stream());
 }
 
 // JavaScript Task
@@ -24,7 +22,8 @@ function jsTask() {
   return src('app/js/script.js', { sourcemaps: true })
     .pipe(babel({ presets: ['@babel/preset-env'] }))
     .pipe(terser())
-    .pipe(dest('dist', { sourcemaps: '.' }));
+    .pipe(dest('dist', { sourcemaps: '.' }))
+    .pipe(browsersync.stream());
 }
 
 // Browsersync
@@ -39,10 +38,10 @@ function browserSyncServe(cb) {
         bottom: '0',
       },
     },
-           //open: false;// if i want to open the server automatically!
   });
   cb();
 }
+
 function browserSyncReload(cb) {
   browsersync.reload();
   cb();
@@ -51,10 +50,7 @@ function browserSyncReload(cb) {
 // Watch Task
 function watchTask() {
   watch('*.html', browserSyncReload);
-  watch(
-    ['app/scss/**/*.scss', 'app/**/*.js'],
-    series(scssTask, jsTask, browserSyncReload)
-  );
+  watch(['app/scss/**/*.scss', 'app/js/**/*.js'], series(scssTask, jsTask, browserSyncReload));
 }
 
 // Default Gulp Task

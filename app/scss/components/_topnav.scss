@@ -1,0 +1,107 @@
+@use '../util/' as *;
+
+.topnav {
+  display: flex;
+  justify-content: space-between; /* Align items to the right */
+  align-items: center;
+  padding-block: 1.5rem;
+  
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    
+    // @media (max-width: 24em) {
+       //  display: none;
+    //  }
+  }
+  
+  &__blockm {
+    position: absolute;
+    right: rem(32);
+    width: rem(95);
+    height: rem(63);
+    border-radius: rem(36);
+    background-color: var(--dkblack);
+    cursor: pointer;
+
+    @media (max-width: 30em) {
+      border-radius: 1.25rem;
+      right: 1rem;
+      width: 3.938rem;
+      height: 3.938rem;
+    }
+  }
+
+  &__open[aria-expanded='true'] {
+    + .topnav__menu {
+      translate: 0;
+      
+      opacity: 1;
+      // @media (prefers-reduced-motion) {
+      // }
+    }
+  }
+
+  &__close {
+    display: block;
+    margin-inline-start: auto;
+    margin-block-end: 8rem;
+    cursor: pointer;
+    background-color: var(--white);
+
+    // margin-block-end: 3rem;
+    
+    img {
+      width: 2.5rem;
+    }
+  }
+  
+  &__menu {
+    // @media (max-width: 40em) {}
+    position: fixed;
+    inset: 0;
+    padding: 1.5rem;
+    background-color: var(--black);
+    translate: 100vw 0;
+    transition: translate 0.5s ease-in-out;
+
+    translate: 0;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+    // @media (min-width: 40em) {
+       //(prefers-reduced-motion) 
+
+    // }
+  }
+  
+  &__links {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    
+    flex-direction: column;
+    // @media (max-width: 40em) {}
+  }
+
+  &__item {
+    list-style-type: none;
+    position: relative;
+
+    // margin-inline-end: -24rem;
+
+    .topnav__link {
+      position: relative;
+      display: inline-block;
+      background-color: #444; /* Box background color */
+      color: white; /* Text color */
+      padding: 0.5rem 1rem; /* Adjust padding as needed */
+      border-radius: 0.25rem; /* Adjust border radius as needed */
+      cursor: pointer; /* Change cursor on hover */
+
+      &:hover {
+        background-color: #666; /* Change background color on hover */
+      }
+    }
+  }
+}

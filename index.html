@@ -16,8 +16,9 @@
   />
 
   <link rel="stylesheet" href="./dist/style.css">
-  <script defer src="./dist/script.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"
+  ></script>
+  <script src="./app/js/script.js" async></script>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -33,14 +34,32 @@
 
   <body>
     <header class="header container">
-
-        <div class="header__button">
-          <a href="#">Products</a>
-          <a href="https://www.chess.com/home" target="_blank">Info</a>
+      <div class="header__button">
+        <a href="#">Products</a>
+        <a href="#">Info</a>
+      </div>
+      
+      <nav>
+        <span id="nav-label" hidden>Navigation</span>
+        <button
+          id="btnOpen"
+          class="topnav__blockm topnav__open"
+          aria-expanded="false"
+          aria-labelledby="nav-label"
+        >
+          <img src="./app/images/wings.png" alt="" width="50px" height="45px"/>
+        </button>
+        <div class="topnav__menu" role="dialog" aria-labelledby="nav-label">
+          <button class="topnav__close" id="btnClose" aria-label="Close">
+            <img src="./app/images/close.png" alt="" width="28" height="27" />
+          </button>
+          <ul class="topnav__links">
+            <li class="topnav__item">
+              <a href="" class="topnav__link">@wings</a>
+            </li>
+          </ul>
         </div>
-      
-      
-
+      </nav>
 
     </header>
     <main>

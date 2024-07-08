@@ -10,9 +10,9 @@ h3 {
 h1 {
   font-size: rem(24);
   margin-bottom: rem(3);
-  @include breakpoint(large) {
-    font-size: rem(28);
-  }
+  // @include breakpoint(large) {
+  //   font-size: rem(28);
+  // }
 }
 
 h2 {
@@ -23,6 +23,8 @@ h2 {
 
 a,
 a:visited,
-a:active {
+a:hover {
   text-decoration: none;
+  color: var(--white);
+
 }
