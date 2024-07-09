@@ -8,6 +8,7 @@ h3 {
 }
 
 h1 {
+  font-weight: bolder;
   font-size: rem(24);
   margin-bottom: rem(3);
   // @include breakpoint(large) {
@@ -20,6 +21,13 @@ h2 {
   margin-bottom: rem(24);
   // color: ;
 }
+
+// p {
+//   font-size: rem(20);
+//   line-height: 1.5;
+//   font-weight: bold;
+//   // color: liniar-gradient
+// }
 
 a,
 a:visited,

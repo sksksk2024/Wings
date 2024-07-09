@@ -1,0 +1,31 @@
+@use '../util/' as *;
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--dkwhite);
+  border-radius: 2rem;
+  width: 41.75rem;
+
+  @media (max-width: 43em) {
+    width: 20.75rem;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+
+  p {
+    font-size: rem(20);
+    line-height: 1.5;
+    font-weight: bold;
+    // color: liniar-gradient
+  }
+
+  &:hover {
+    background-color: var(--orange);
+  }
+}
