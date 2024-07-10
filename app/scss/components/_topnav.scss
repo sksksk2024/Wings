@@ -1,5 +1,13 @@
 @use '../util/' as *;
 
+.no-scroll {
+  position: fixed;
+}
+
+body.menu-open .sliders {
+  display: none;
+}
+
 .topnav {
   display: flex;
   justify-content: space-between; /* Align items to the right */
@@ -50,6 +58,12 @@
     cursor: pointer;
     background-color: var(--white);
 
+    @media (max-width: 28.875em) {
+      position: relative;
+      right: -11px;
+
+    }
+
     // margin-block-end: 3rem;
     
     img {
@@ -62,7 +76,7 @@
     position: fixed;
     inset: 0;
     padding: 1.5rem;
-    background-color: var(--black);
+    background-color: var(--dkblack);
     translate: 100vw 0;
     transition: translate 0.5s ease-in-out;
 

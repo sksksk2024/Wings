@@ -5,12 +5,13 @@
   grid-template-columns: 1fr;
   background-color: var(--dkwhite);
   border-radius: 2rem;
+  margin-top: 6rem;
   width: 41.75rem;
-
+  
   @media (max-width: 43em) {
     width: 20.75rem;
   }
-
+  
   &__title {
     display: flex;
     justify-content: center;
@@ -28,4 +29,10 @@
   &:hover {
     background-color: var(--orange);
   }
+}
+
+.card2 {
+  position: relative;
+  top: 215px;
+  
 }

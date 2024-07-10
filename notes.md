@@ -16,6 +16,8 @@ phone: a burger menu that rotates 360 and to wings logo to X
 1 composed in 3 cool squares with animation with the parallettes 
 
 1 about What are these(parallettes) and the contact to purchase them?
+ps: put the sliders below, and in 2 columns
+
 
 below everything is:
 1 thin line

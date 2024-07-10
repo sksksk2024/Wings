@@ -10,7 +10,9 @@ function openMobileMenu() {
   topNavMenu.removeAttribute('inert');
   topNavMenu.removeAttribute('style');
   main.setAttribute('inert', '');
-  bodyScrollLockUpgrade.disableBodyScroll(body);
+  //bodyScrollLockUpgrade.disableBodyScroll(body);
+  body.classList.add('no-scroll'); // Prevent scrolling
+  body.classList.add('menu-open'); // Add class to hide sliders
   btnClose.focus();
 }
 
@@ -18,7 +20,9 @@ function closeMobileMenu() {
   btnOpen.setAttribute('aria-expanded', 'false');
   topNavMenu.setAttribute('inert', '');
   main.removeAttribute('inert');
-  bodyScrollLockUpgrade.enableBodyScroll(body);
+  //bodyScrollLockUpgrade.enableBodyScroll(body);
+  body.classList.remove('no-scroll'); // Allow scrolling
+  body.classList.remove('menu-open'); // Remove class to show sliders
   btnOpen.focus();
 
   setTimeout(() => {
@@ -48,3 +52,15 @@ btnClose.addEventListener('click', closeMobileMenu);
 media.addEventListener('change', function (e) {
   setupTopNav(e);
 });
+
+var angle = 0;
+
+function galleryspin(sign) { 
+  var spinner = document.querySelector("#spinner");
+  if (!sign) { 
+    angle = angle + 120; 
+  } else { 
+    angle = angle - 120; 
+  }
+  spinner.setAttribute("style","transform: rotateY("+ angle +"deg);");
+}
