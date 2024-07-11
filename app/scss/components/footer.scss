@@ -1,0 +1,33 @@
+@use '../util/' as *;
+
+.footer {
+  position: relative;
+  bottom: -227px;
+  height: 16vh;
+  hr {
+    border: 2px solid var(--dkblack);
+  }
+
+  p {
+    line-height: 1.3;
+    font-weight: bold;
+  }
+
+  a {
+    display: grid;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--gray);
+    border-radius: 14%;
+    height: 20px;
+  }
+
+  #last-updated {
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+  #update-date {
+    font-weight: bold;
+  }
+}
