@@ -1,0 +1,23 @@
+@use '../util/' as *;
+
+.membrii {
+  
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 700;
+  }
+
+  &__description {
+  }
+
+  img {
+    //pozele sa fie in dreapta jos!!!
+    border-radius: 28%;
+    display: flex;
+    justify-self: rigth;
+    height: 200px;
+    width: 200px;
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calisthenics Wings - Info</title>
+  <link rel="icon" href="./app/images/wings.png" type="image/png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./dist/style.css">
+  <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
+  <script src="./app/js/script.js" async></script>
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+<body class="body">
+  <header class="header container">
+    <div class="header__button">
+      <a href="index.html">Products</a>
+      <a href="info.html">Info</a>
+    </div>
+    
+    <nav>
+      <span id="nav-label" hidden>Navigation</span>
+      <button id="btnOpen" class="topnav__blockm topnav__open" aria-expanded="false" aria-labelledby="nav-label">
+        <img src="./app/images/wings.png" alt="" width="50px" height="45px"/>
+      </button>
+      <div class="topnav__menu" role="dialog" aria-labelledby="nav-label">
+        <button class="topnav__close" id="btnClose" aria-label="Close">
+          <img src="./app/images/close.png" alt="" width="28" height="27" />
+        </button>
+        <ul class="topnav__links">
+          <li class="topnav__item">
+            <a href="https://www.instagram.com/wings__sw/" class="topnav__link">@wings</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="container">Membrii Wings</h1>
+
+
+    <section class="container cards membrii">
+      <div class="membrii__title">Serafim Socaciu</div>
+      <p class="membrii__description">  
+        Rol:  <br>
+        Curiozitate:  <br>
+        Pasiune:   
+      </p>
+      <img src="./app/images/Serafim.png" alt="">
+    </section>
+
+    <section class="container cards membrii">
+      <div class="membrii__title">Alexa Mihai</div>
+      <p class="membrii__description">  
+        Rol: Creator de Continut si Sportiv Activ <br>
+        Curiozitate: Îmi place să mănânc <br>
+        Pasiune: Sah 
+      </p>
+      <img src="./app/images/Mihai.png" alt="">
+    </section>
+
+    <section class="container cards membrii">
+      <div class="membrii__title">Cota Alexandru</div>
+      <p class="membrii__description">  
+        Rol: Web Developer, Creator de Continut si Sportiv Activ<br>
+        Curiozitate: Iubesc sa trec peste limitele mele <br>
+        Pasiune: Muzica si sa gandesc
+      </p>
+      <img src="./app/images/Alex.png" alt="">
+    </section>
+
+
+  </main>
+
+  <footer class="footer container">
+    <hr>
+    <p>
+      © 2024 Calisthenics Wings | 0757476361 pentru comenzi si mai multe informatii!
+    </p>
+
+    <div>
+      <a href="index.html">Products</a>
+      <a href="info.html">Info</a>
+    </div>
+
+    <!-- Last updated(just the Day, Month and Year) -->
+    <p id="last-updated">Last updated: <span id="update-date"></span></p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const updateDateElement = document.getElementById('update-date');
+      const lastModified = new Date(document.lastModified);
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      const formattedDate = lastModified.toLocaleDateString(undefined, options);
+      updateDateElement.textContent = formattedDate;
+    });
+  </script>            //trb mutat in js dupa ce termin!!!
+</body>
+</html>
