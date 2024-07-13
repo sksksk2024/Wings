@@ -31,7 +31,7 @@
 <body class="body">
   <header class="header container">
     <div class="header__button">
-      <a href="index.html">Products</a>
+      <a href="index.html">Produse</a>
       <a href="info.html">Info</a>
     </div>
     
@@ -46,7 +46,7 @@
         </button>
         <ul class="topnav__links">
           <li class="topnav__item">
-            <a href="https://www.instagram.com/wings__sw/" class="topnav__link">@wings</a>
+            <a href="https://www.instagram.com/wings__sw/" class="topnav__link" target="_blank">@wings</a>
           </li>
         </ul>
       </div>
@@ -54,15 +54,17 @@
   </header>
 
   <main>
-    <h1 class="container">Membrii Wings</h1>
+    <h1 class="container membrii__h1" >Membrii Wings</h1>
 
 
     <section class="container cards membrii">
-      <div class="membrii__title">Serafim Socaciu</div>
+      <div class="membrii__title">Socaciu Serafim</div>
       <p class="membrii__description">  
         Rol:  <br>
         Curiozitate:  <br>
-        Pasiune:   
+        Pasiune:   <br>
+        <img src="./app/images/insta.png" style="display: inline-block; vertical-align: middle; max-width: 60px; max-height: 60px;" alt="">
+        <a href="https://www.instagram.com/serafim.socaciu/" style="display: inline-block; vertical-align: middle; white-space: nowrap; font-weight: normal;" target="_blank">@serafim.socaciu</a>
       </p>
       <img src="./app/images/Serafim.png" alt="">
     </section>
@@ -70,21 +72,27 @@
     <section class="container cards membrii">
       <div class="membrii__title">Alexa Mihai</div>
       <p class="membrii__description">  
-        Rol: Creator de Continut si Sportiv Activ <br>
+        Rol: Creator de Conținut si Sportiv Activ <br>
         Curiozitate: Îmi place să mănânc <br>
-        Pasiune: Sah 
+        Pasiune: Șah <br>
+        <img src="./app/images/insta.png" style="display: inline-block; vertical-align: middle; max-width: 60px; max-height: 60px;" alt="">
+        <a href="https://www.instagram.com/mihai.ev/" style="display: inline-block; vertical-align: middle; white-space: nowrap; font-weight: normal;" target="_blank">@mihai.ev</a> <br>
+        <img src="./app/images/tiktok.png" style="display: inline-block; vertical-align: middle; max-width: 47px; max-height: 46px; margin-left: 8px;" alt="">
+        <a href="https://www.tiktok.com/@mihai.ev" style="display: inline-block; vertical-align: middle; white-space: nowrap; font-weight: normal;" target="_blank">@mihai.ev</a>
       </p>
       <img src="./app/images/Mihai.png" alt="">
     </section>
 
     <section class="container cards membrii">
-      <div class="membrii__title">Cota Alexandru</div>
+      <div class="membrii__title">Coța Alexandru</div>
       <p class="membrii__description">  
-        Rol: Web Developer, Creator de Continut si Sportiv Activ<br>
-        Curiozitate: Iubesc sa trec peste limitele mele <br>
-        Pasiune: Muzica si sa gandesc
+        Rol: Web Developer, Creator de Conținut si Sportiv Activ<br>
+        Curiozitate: Iubesc să trec peste limitele mele <br>
+        Pasiune: Muzica și să gândesc <br>
+        <img src="./app/images/insta.png" style="display: inline-block; vertical-align: middle; max-width: 60px; max-height: 60px;" alt="">
+        <a href="https://www.instagram.com/alextvop2016/" style="display: inline-block; vertical-align: middle; white-space: nowrap; font-weight: normal;" target="_blank">@alextvop2016</a>
       </p>
-      <img src="./app/images/Alex.png" alt="">
+      <img src="./app/images/alex2.png" alt="">
     </section>
 
 
@@ -93,26 +101,16 @@
   <footer class="footer container">
     <hr>
     <p>
-      © 2024 Calisthenics Wings | 0757476361 pentru comenzi si mai multe informatii!
+      © 2024 Calisthenics Wings | 0757476361 pentru comenzi și mai multe informații!
     </p>
 
     <div>
-      <a href="index.html">Products</a>
+      <a href="index.html">Produse</a>
       <a href="info.html">Info</a>
     </div>
 
     <!-- Last updated(just the Day, Month and Year) -->
-    <p id="last-updated">Last updated: <span id="update-date"></span></p>
+    <p>Last Updated: <span id="update-date"></span></p>
   </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const updateDateElement = document.getElementById('update-date');
-      const lastModified = new Date(document.lastModified);
-      const options = { year: 'numeric', month: 'long', day: 'numeric' };
-      const formattedDate = lastModified.toLocaleDateString(undefined, options);
-      updateDateElement.textContent = formattedDate;
-    });
-  </script>            //trb mutat in js dupa ce termin!!!
 </body>
 </html>

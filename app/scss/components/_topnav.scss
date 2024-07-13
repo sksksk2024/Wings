@@ -56,7 +56,8 @@ body.menu-open .sliders {
     margin-inline-start: auto;
     margin-block-end: 8rem;
     cursor: pointer;
-    background-color: var(--white);
+    background: radial-gradient(circle, red, white);
+    // background-color: var(--white);
 
     @media (max-width: 28.875em) {
       position: relative;
@@ -79,6 +80,7 @@ body.menu-open .sliders {
     background-color: var(--dkblack);
     translate: 100vw 0;
     transition: translate 0.5s ease-in-out;
+    background: radial-gradient(circle, black, white);
 
     translate: 0;
     opacity: 0;
@@ -112,6 +114,11 @@ body.menu-open .sliders {
       padding: 0.5rem 1rem; /* Adjust padding as needed */
       border-radius: 0.25rem; /* Adjust border radius as needed */
       cursor: pointer; /* Change cursor on hover */
+      background: radial-gradient(yellow, orange, red);
+      color: black;
+      font-weight: bold;
+      font-size: 60px;
+      border-radius: 94px;
 
       &:hover {
         background-color: #666; /* Change background color on hover */

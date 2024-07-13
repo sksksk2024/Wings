@@ -68,10 +68,12 @@ function galleryspin(sign) {
 //last updated
 document.addEventListener('DOMContentLoaded', () => {
   const updateDateElement = document.getElementById('update-date');
-  const lastModified = new Date(document.lastModified);
+  if (updateDateElement) {
+    const lastModified = new Date(document.lastModified);
 
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  const formattedDate = lastModified.toLocaleDateString(undefined, options);
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = lastModified.toLocaleDateString(undefined, options);
 
-  updateDateElement.textContent = formattedDate;
+    updateDateElement.textContent = formattedDate;
+  }
 });
