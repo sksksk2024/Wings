@@ -66,10 +66,10 @@ function galleryspin(sign) {
 document.addEventListener('DOMContentLoaded', () => {
   const updateDateElement = document.getElementById('update-date');
   if (updateDateElement) {
-    const lastModified = new Date(document.lastModified);
+    const currentDate = new Date();
 
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    const formattedDate = lastModified.toLocaleDateString('en-US', options); // Explicitly setting locale to 'en-US'
+    const formattedDate = currentDate.toLocaleDateString('en-US', options);
 
     updateDateElement.textContent = formattedDate;
   }
@@ -81,7 +81,7 @@ function toggleMenu() {
   const btnOpen = document.getElementById('btnOpen');
   const btnClose = document.getElementById('btnClose');
   const menu = document.querySelector('.topnav__menu');
-
+  
   const isOpen = body.classList.toggle('menu-open');
   btnOpen.setAttribute('aria-expanded', isOpen);
   btnClose.setAttribute('aria-expanded', isOpen);
