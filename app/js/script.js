@@ -63,17 +63,17 @@ function galleryspin(sign) {
 }
 
 //last updated
-document.addEventListener('DOMContentLoaded', () => {
-  const updateDateElement = document.getElementById('update-date');
-  if (updateDateElement) {
-    const currentDate = new Date();
+// document.addEventListener('DOMContentLoaded', () => {
+//   const updateDateElement = document.getElementById('update-date');
+//   if (updateDateElement) {
+//     const currentDate = new Date();
 
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    const formattedDate = currentDate.toLocaleDateString('en-US', options);
+//     const options = { year: 'numeric', month: 'long', day: 'numeric' };
+//     const formattedDate = currentDate.toLocaleDateString('en-US', options);
 
-    updateDateElement.textContent = formattedDate;
-  }
-});
+//     updateDateElement.textContent = formattedDate;
+//   }
+// });
 
 //not see the relative objects once the burger menu is open
 function toggleMenu() {
