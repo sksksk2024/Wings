@@ -1,3 +1,5 @@
+@use '../util/' as *;
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -20,9 +22,9 @@ body {
 
 .visually-hidden {
   position: absolute;
-  left: -10000px;
+  left: rem(-10000);
   top: auto;
-  width: 1px;
-  height: 1px;
+  width: rem(1);
+  height: rem(1);
   overflow: hidden;
 }

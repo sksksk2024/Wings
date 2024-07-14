@@ -1,3 +1,5 @@
+@use '../util/' as *;
+
 *{
   // margin: 0;
   padding: 0;
@@ -8,31 +10,31 @@
     display: flex;
     text-align: center;
     position: relative;
-    perspective: 1200px;
-    width: 748px;
-    left: -214px;
+    perspective: rem(1200);
+    width: rem(748);
+    left: rem(-214);
     
     
     @media (min-width: 100em) {
-      left: -100px;
+      left: rem(-100);
     }
 
-    @media (min-width: 50em){
-      left: 38px;
-      bottom: -103px;
+    @media (min-width: 53em){
+      left: rem(38);
+      bottom: rem(-103);
     }
-    @media (max-width: 35em){
+    @media (max-width: 38.25em){
       justify-content: center;
       text-align-last: center;
       // width: 389px;
-      max-width: 352px;
+      max-width: rem(352);
     }
   }
   
   .center .img-card{
   position: relative;
-  height: 350px;
-  width: 400px;
+  height: rem(350);
+  width: rem(400);
   transform-style: preserve-3d;
   transition: transform .5s ease-in;
   }
@@ -45,22 +47,22 @@
   }
   
   .img-card img:nth-child(1){ 
-  transform: rotateX(-270deg) translateY(-175px);
+  transform: rotateX(-270deg) translateY(rem(-175));
   transform-origin: top left;
   }
   
   .img-card img:nth-child(2){
-  transform: translateZ(175px);
+  transform: translateZ(rem(175));
   //opacity: 0;
   }
   
   .img-card img:nth-child(3){ 
-  transform: rotateX(-90deg) translateY(175px);
+  transform: rotateX(-90deg) translateY(rem(175));
   transform-origin: bottom center;
   }
   
   .img-card img:nth-child(4){ 
-  transform: rotateX(-180deg) translateY(350px) translateZ(175px);
+  transform: rotateX(-180deg) translateY(rem(350)) translateZ(rem(175));
   transform-origin: bottom right;
   }
   
@@ -81,13 +83,13 @@
   position: absolute;
   display: block;
   right: 0;
-  top: -30px;
+  top: rem(-30);
 
   @media (max-width: 40em) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    top: 388px;
+    gap: rem(12);
+    top: rem(388);
     right: 0;
     left: 81%;
     transform: translateX(-50%);
@@ -95,13 +97,13 @@
   }
   
   .sliders label{
-  height: 98px;
-  width: 110px;
+  height: rem(98);
+  width: rem(110);
   display: flex;
   overflow: hidden;
   cursor: pointer;
-  margin: 6px 0;
-  border: 2px solid #2d4052;
+  margin: rem(6) 0;
+  border: rem(2) solid #2d4052;
   }
   .sliders label:nth-child(1){
     @media (min-width: 40em) {

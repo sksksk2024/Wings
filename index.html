@@ -32,7 +32,7 @@
   </style>
 </head>
 
-  <body class="body">
+  <body class="body container">
     <header class="header container">
       <div class="header__button">
         <a href="index.html">Produse</a>
@@ -44,13 +44,14 @@
         <button
           id="btnOpen"
           class="topnav__blockm topnav__open"
+          onclick="toggleMenu()"
           aria-expanded="false"
           aria-labelledby="nav-label"
         >
           <img src="./app/images/wings.png" alt="" width="50px" height="45px"/>
         </button>
         <div class="topnav__menu" role="dialog" aria-labelledby="nav-label">
-          <button class="topnav__close" id="btnClose" aria-label="Close">
+          <button class="topnav__close" id="btnClose" onclick="toggleMenu()" aria-label="Close">
             <img src="./app/images/close.png" alt="" width="28" height="27" />
           </button>
           <ul class="topnav__links">
@@ -70,7 +71,7 @@
         </p>
       </section>
 
-      <section>
+      <section class="container">
         <div class="center">
           <input type="radio" checked name="active" id="tab-1">
           <input type="radio" name="active" id="tab-2">
@@ -78,15 +79,15 @@
           <input type="radio" name="active" id="tab-4">
           <div class="sliders">
             <label for="tab-1"><img src="./app/images/paralele1.png" alt=""></label>
-            <label for="tab-2"><img src="./app/images/paralele2.png" alt=""></label>
-            <label for="tab-3"><img src="./app/images/paralele3.png" alt=""></label>
-            <label for="tab-4"><img src="./app/images/paralele4.png" alt=""></label>
+            <label for="tab-2"><img src="./app/images/alex33.png" alt=""></label>
+            <label for="tab-3"><img src="./app/images/paralele2.png" alt=""></label>
+            <label for="tab-4"><img src="./app/images/alex22.png" alt=""></label>
           </div>
           <div class="img-card">
             <img src="./app/images/paralele1.png" alt="">
+            <img src="./app/images/alex33.png" alt="">
             <img src="./app/images/paralele2.png" alt="">
-            <img src="./app/images/paralele3.png" alt="">
-            <img src="./app/images/paralele4.png" alt="">
+            <img src="./app/images/alex22.png" alt="">
           </div>
         </div>
 
@@ -110,12 +111,12 @@
       </p>
 
       <div>
-        <a href="index.html">Produse</a>
-        <a href="info.html">Info</a>
+        <a href="index.html" style="font-weight: 700;">Produse</a>
+        <a href="info.html" style="font-weight: 700;">Info</a>
       </div>
       
       <!-- Last updated(just the Day, Month and Year) -->
-      <p>Last Updated: <span id="update-date"></span></p>
+      <p style="display: flex; justify-content: end; font-size: 17px;">Last Updated: <span id="update-date" style="margin-left: 0.3125rem; font-size: 17px;"></span></p>
     </footer>
   </body>
 </html>

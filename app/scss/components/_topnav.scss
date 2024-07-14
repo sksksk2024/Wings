@@ -56,13 +56,12 @@ body.menu-open .sliders {
     margin-inline-start: auto;
     margin-block-end: 8rem;
     cursor: pointer;
-    background: radial-gradient(circle, red, white);
+    background: radial-gradient(circle, var(--white), var(--red));
     // background-color: var(--white);
 
     @media (max-width: 28.875em) {
       position: relative;
-      right: -11px;
-
+      right: rem(-11);
     }
 
     // margin-block-end: 3rem;
@@ -80,15 +79,12 @@ body.menu-open .sliders {
     background-color: var(--dkblack);
     translate: 100vw 0;
     transition: translate 0.5s ease-in-out;
-    background: radial-gradient(circle, black, white);
-
+    background: radial-gradient(circle, var(--black), var(--white));
     translate: 0;
     opacity: 0;
     transition: opacity 250ms ease-in-out;
-    // @media (min-width: 40em) {
-       //(prefers-reduced-motion) 
-
-    // }
+    
+    z-index: 1000; /* Ensure it's on top of other elements */
   }
   
   &__links {
@@ -109,19 +105,18 @@ body.menu-open .sliders {
     .topnav__link {
       position: relative;
       display: inline-block;
-      background-color: #444; /* Box background color */
-      color: white; /* Text color */
+      color: var(--white); /* Text color */
       padding: 0.5rem 1rem; /* Adjust padding as needed */
-      border-radius: 0.25rem; /* Adjust border radius as needed */
       cursor: pointer; /* Change cursor on hover */
-      background: radial-gradient(yellow, orange, red);
-      color: black;
+      background: var(--black);
+      color: var(--white);
       font-weight: bold;
-      font-size: 60px;
-      border-radius: 94px;
+      font-size: rem(60);
+      border-radius: rem(94);
 
       &:hover {
-        background-color: #666; /* Change background color on hover */
+        background-color: var(--gray); /* Change background color on hover */
+        color: var(--black);
       }
     }
   }

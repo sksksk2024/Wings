@@ -1,9 +1,8 @@
 @use '../util/' as *;
 
 .footer {
-  height: 20vh;
   hr {
-    border: 2px solid var(--dkblack);
+    border: rem(2) solid var(--dkblack);
   }
   
   p {
@@ -14,16 +13,16 @@
   a {
     display: grid;
     text-align: center;
-    color: var(--white);
-    background-color: var(--gray);
+    background-color: var(--black);
     border-radius: 14%;
-    height: 20px;
+    height: rem(20);
   }
   
   &__1 {
     position: relative;
-    bottom: -247px;
-    height: 58vh;
+    bottom: rem(-247);
+    height: 21vh;
+    // height: 58vh;
     // background-color: var(--coolorange)ș
   }
 

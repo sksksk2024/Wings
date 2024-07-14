@@ -77,3 +77,16 @@ document.addEventListener('DOMContentLoaded', () => {
     updateDateElement.textContent = formattedDate;
   }
 });
+
+//not see the relative objects once the burger menu is open
+function toggleMenu() {
+  const body = document.body;
+  const btnOpen = document.getElementById('btnOpen');
+  const btnClose = document.getElementById('btnClose');
+  const menu = document.querySelector('.topnav__menu');
+
+  const isOpen = body.classList.toggle('menu-open');
+  btnOpen.setAttribute('aria-expanded', isOpen);
+  btnClose.setAttribute('aria-expanded', isOpen);
+  menu.style.opacity = isOpen ? '1' : '0';
+}
