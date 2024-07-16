@@ -20,7 +20,6 @@
         background-color: var(--black);
         font-weight: 700;
         color: var(--white);
-        padding: rem(6) rem(26);
         margin: rem(1) rem(1.1);
         cursor: pointer;
         border-radius: rem(16);
@@ -29,17 +28,21 @@
         box-shadow: 0 rem(10) rem(25) rgba(0, 0, 0, .5);
         transition: opacity 200ms ease-in-out;
       } 
-
+      
       a:hover {
         background-color: var(--ltblack);
       }
-
+      
       &:hover {
         opacity: 0.82;
       }
     }
+    
+    &__central1 {
+      padding: rem(6) rem(19);
+    }
 
-    // nav {
-    //   background-color:#002d60;
-    // }
+    &__central2 {
+      padding: rem(6) rem(30);
+    }
   }
