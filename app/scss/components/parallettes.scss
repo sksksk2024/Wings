@@ -14,11 +14,10 @@
     width: rem(748);
     left: rem(-214);
     
-    
     @media (min-width: 100em) {
       left: rem(-100);
     }
-
+    
     @media (min-width: 53em){
       left: rem(38);
       bottom: rem(-103);
@@ -26,8 +25,7 @@
     @media (max-width: 38.25em){
       justify-content: center;
       text-align-last: center;
-      // width: 389px;
-      max-width: rem(352);
+      max-width: rem(313);
     }
   }
   
