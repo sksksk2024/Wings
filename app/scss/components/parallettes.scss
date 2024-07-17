@@ -12,7 +12,7 @@
     position: relative;
     perspective: rem(1200);
     width: rem(748);
-    left: rem(-214);
+    left: -13.3rem;
     
     @media (min-width: 100em) {
       left: rem(-100);
@@ -26,6 +26,7 @@
       justify-content: center;
       text-align-last: center;
       max-width: rem(313);
+      margin-left: rem(30);
     }
   }
   
