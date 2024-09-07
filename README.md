@@ -1,1 +1,1 @@
-"# Wings" 
+This project is definetely one of my biggest projects I have until now. I already work on a sports equipment company(small now). As my web-development skills increases, this site will be more entertaining and more like a modern site!
